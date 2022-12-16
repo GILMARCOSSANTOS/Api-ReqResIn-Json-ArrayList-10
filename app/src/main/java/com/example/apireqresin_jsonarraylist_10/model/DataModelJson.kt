@@ -3,7 +3,7 @@ package com.example.apireqresin_jsonarraylist_10.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Data(
+data class DataModelJson(
     @SerializedName("avatar")
     val avatar: String,
     @SerializedName("email")
