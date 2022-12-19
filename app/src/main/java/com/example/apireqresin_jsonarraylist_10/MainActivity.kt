@@ -1,33 +1,26 @@
 package com.example.apireqresin_jsonarraylist_10
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.items_rcclrvw_actvtmain.*
+import androidx.appcompat.app.AppCompatActivity
+import com.example.apireqresin_jsonarraylist_10.adapter.AdapterRecyclerView
+import com.example.apireqresin_jsonarraylist_10.model.DataModelJson
+
 
 //import com.example.apireqresin_jsonarraylist_10.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-   // private lateinit var binding: ActivityMainBinding
+    private val dataList: MutableList<DataModelJson> = mutableListOf()
+    private lateinit var adapterRecyclerView: AdapterRecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        //Setup Android NetWorking
+        // AndroidNetNetworking.initialize(this)
+       // AndroidNet
+        
 
     }
 }

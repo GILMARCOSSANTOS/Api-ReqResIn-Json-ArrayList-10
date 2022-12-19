@@ -10,12 +10,15 @@ import com.example.apireqresin_jsonarraylist_10.R
 import com.example.apireqresin_jsonarraylist_10.model.DataModelJson
 import kotlinx.android.synthetic.main.items_rcclrvw_actvtmain.view.*
 
-class AdapterRecyclerView (private val context: Context, private val dataList: MutableList<DataModelJson>) :
+class AdapterRecyclerView(
+    private val context: Context,
+    private val dataList: MutableList<DataModelJson>
+) :
     RecyclerView.Adapter<AdapterRecyclerView.HolderRecyclerView>() {
 
-  //  private lateinit var context: Context
+    //  private lateinit var context: Context
 
-    class HolderRecyclerView(view: View) : RecyclerView.ViewHolder(view){
+    class HolderRecyclerView(view: View) : RecyclerView.ViewHolder(view) {
 
         var userNameTextView: TextView? = null
 
@@ -27,15 +30,13 @@ class AdapterRecyclerView (private val context: Context, private val dataList: M
     override fun onBindViewHolder(holder: HolderRecyclerView, position: Int) {
         val data = dataList.get(position)
 
-        holder.userNameTextView?.text = holder.itemView.findViewById(R.id.txtVw_userName_id)
-        holder.userNameTextView = holder.itemView.txtVw_userName_id
+//        holder.userNameTextView?.text = holder.itemView.findViewById(R.id.txtVw_userName_id)
+//        holder.userNameTextView = holder.itemView.txtVw_userName_id
+//        val fullName = "${data.firstName} ${data.lastName}"
+        val userFullNameTextView = holder.itemView.txtVw_userName_id
+
         val fullName = "${data.firstName} ${data.lastName}"
-
-
-
-
-
-
+        userFullNameTextView.text = fullName
 
     }
 
